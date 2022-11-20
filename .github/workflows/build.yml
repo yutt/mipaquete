@@ -19,13 +19,12 @@ jobs:
         run: poetry run pytest
       
       - run: poetry build
-      - run: cd docs & poetry run make singlehtml
+      
       - name: Publishing
         uses: softprops/action-gh-release@v1
         with:
-          files: |
-            ${{github.workspace}}/dist/* 
-            ${{github.workspace}}/docs/build/singlehtml/*.html
+          files: ${{github.workspace}}/dist/* 
+        
       
 
     
