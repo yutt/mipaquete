@@ -15,13 +15,13 @@ jobs:
         run: poetry install
       - name: Runing Tests
         run: poetry run pytest --junitxml=jest-junit.xml
-      - name: Reporting
-        uses: dorny/test-reporter@v1
-        if: success()||failure()
-        with: 
-          name: Tests
-          path: jest-junit.xml
-          reporter: jest-junit
+      # - name: Reporting
+      #   uses: dorny/test-reporter@v1
+      #   if: success()||failure()
+      #   with: 
+      #     name: Tests
+      #     path: jest-junit.xml
+      #     reporter: jest-junit
 
       - run: poetry build
       
