@@ -22,6 +22,6 @@ jobs:
       - name: Publishing
         uses: softprops/action-gh-release@v1
         with:
-          files: ${{github.workspace}}/dist/* 
-  test:
+          files: ${{github.workspace}}/dist/*
+
     

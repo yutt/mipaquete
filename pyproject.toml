@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mipaquete"
-version = "0.1.0"
+version = "0.1.1"
 description = "Este es un paquete de ejemplo con algunas funcionalidades simples, orientado al estudio del funcionamiento de paquetes en python"
 authors = ["Alejandro Medina <aresempai@gmail.com>"]
 
