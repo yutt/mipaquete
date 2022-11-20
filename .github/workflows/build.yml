@@ -1,0 +1,27 @@
+name: Building
+on: 
+  push:
+    tags:
+      - "v*.*.*"
+jobs:
+  building: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup
+        with: 
+          python-version: '3.10'
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+      - name: Install dependencies
+        run: poetry install
+      - name: Runing Tests
+        run: poetry run pytest
+      
+      - run: poetry build
+      - name: Publishing
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{github.workspace}}/dist/* 
+  test:
+    
