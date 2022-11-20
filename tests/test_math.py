@@ -16,6 +16,8 @@ def test_sumar_typecheck_int():
 
 def test_sumar_typecheck_float():
     assert  type(sumar(1,1.)) == float
+    assert  type(sumar(1.,1)) == float
+    assert  type(sumar(1.,1.)) == float
 
 
 def test_restar():
@@ -33,6 +35,8 @@ def test_restar_typecheck_int():
 
 def test_restar_typecheck_float():
     assert  type(restar(1,1.)) == float
+    assert  type(restar(1.,1)) == float
+    assert  type(restar(1.,1.)) == float
 
 
 
@@ -49,3 +53,5 @@ def test_multiplicar_typecheck_int():
 
 def test_multiplicar_typecheck_float():
     assert  type(multiplicar(1,1.)) == float
+    assert  type(multiplicar(1.,1)) == float
+    assert  type(multiplicar(1.,1.)) == float
