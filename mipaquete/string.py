@@ -1,7 +1,12 @@
 
+def minusculas (text:str)->str:
+    '''
+    Devuelve una versión en minúsculas del texto almacenado en text
+    '''
+    return text.lower()
 
-def minusculas (text : str): 
-    pass
-
-def mayusculas (text : str):
-    pass
+def mayusculas (text:str)->str:
+    '''
+    Devuelve una versión en minúsculas del texto almacenado en text
+    '''
+    return text.upper()
